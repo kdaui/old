@@ -1,11 +1,6 @@
 :root {
-  --bg-color: #fff;
-  --text-color: #333;
-}
-
-html[data-theme="dark"] {
   --bg-color: #333;
-  --text-color: #fff;
+  --text-color: #f0f0f0;
 }
 
 body {
@@ -23,7 +18,7 @@ header {
   color: var(--text-color);
   padding: 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   font-size: 2.5rem;
   font-weight: bold;
@@ -40,7 +35,7 @@ main {
 }
 
 section {
-  background-color: var(--bg-color);
+  background-color: #444;
   border: 2px solid var(--text-color);
   border-radius: 10px;
   padding: 20px;
@@ -84,43 +79,11 @@ footer p {
   margin: 0;
 }
 
-/* Dark Mode Toggle */
-.dark-mode-toggle {
-  display: flex;
-  align-items: center;
-}
-
-.dark-mode-toggle__input {
-  display: none;
-}
-
-.dark-mode-toggle__label {
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-  background-color: #ccc;
-  border-radius: 34px;
-  position: relative;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.dark-mode-toggle__label:before {
-  content: "";
-  position: absolute;
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  background-color: #fff;
-  left: 4px;
-  top: 4px;
-  transition: transform 0.3s;
-}
-
-.dark-mode-toggle__input:checked + .dark-mode-toggle__label {
-  background-color: #333;
-}
-
-.dark-mode-toggle__input:checked + .dark-mode-toggle__label:before {
-  transform: translateX(26px);
+/* Manga-style Font */
+@font-face {
+  font-family: 'Manga-style';
+  src: url('manga-style.woff2') format('woff2'),
+       url('manga-style.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
