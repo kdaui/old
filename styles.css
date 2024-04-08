@@ -1,8 +1,9 @@
 /* General Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Manga-style', sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #f0f0f0;
 }
 
 /* Header Styles */
@@ -11,52 +12,61 @@ header {
   color: #fff;
   padding: 20px;
   text-align: center;
-}
-
-h1 {
-  margin: 0;
-}
-
-/* Navigation Styles */
-nav {
-  background-color: #f2f2f2;
-  padding: 10px;
-  text-align: center;
-}
-
-nav a {
-  color: #333;
-  text-decoration: none;
-  padding: 10px;
-  margin: 0 10px;
-}
-
-nav a:hover {
-  background-color: #333;
-  color: #fff;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 /* Main Content Styles */
 main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+section {
+  background-color: #fff;
+  border: 2px solid #333;
+  border-radius: 10px;
   padding: 20px;
+  margin-bottom: 40px;
+  width: 80%;
+  max-width: 800px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
   color: #333;
+  font-size: 2rem;
+  margin-top: 0;
+  text-align: center;
 }
 
 p {
-  line-height: 1.5;
+  line-height: 1.6;
+  font-size: 1.1rem;
 }
 
 /* Footer Styles */
 footer {
   background-color: #333;
   color: #fff;
-  padding: 10px;
+  padding: 20px;
   text-align: center;
+  font-size: 0.9rem;
 }
 
 footer p {
   margin: 0;
+}
+
+/* Manga-style Font */
+@font-face {
+  font-family: 'Manga-style';
+  src: url('manga-style.woff2') format('woff2'),
+       url('manga-style.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
