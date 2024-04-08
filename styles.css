@@ -1,29 +1,62 @@
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+/* Header Styles */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
 }
-h1, h2 {
-    color: #333;
-    margin-bottom: 10px;
+
+h1 {
+  margin: 0;
 }
-.username {
-    font-weight: bold;
-    color: #007bff;
+
+/* Navigation Styles */
+nav {
+  background-color: #f2f2f2;
+  padding: 10px;
+  text-align: center;
 }
+
+nav a {
+  color: #333;
+  text-decoration: none;
+  padding: 10px;
+  margin: 0 10px;
+}
+
+nav a:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Main Content Styles */
+main {
+  padding: 20px;
+}
+
+h2 {
+  color: #333;
+}
+
 p {
-    margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
 }
