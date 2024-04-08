@@ -17,3 +17,4 @@ if (isDarkMode) {
   html.dataset.theme = 'dark';
   darkModeToggle.checked = true;
 }
+
