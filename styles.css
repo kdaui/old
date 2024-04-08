@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-  font-family: 'Manga-style', sans-serif;
+  font-family: sans-serif;
   margin: 0;
   padding: 0;
   background-color: #1a1a1a;
@@ -70,13 +70,4 @@ footer {
 
 footer p {
   margin: 0;
-}
-
-/* Manga-style Font */
-@font-face {
-  font-family: 'Manga-style';
-  src: url('manga-style.woff2') format('woff2'),
-       url('manga-style.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
 }
