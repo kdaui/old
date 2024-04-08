@@ -3,7 +3,8 @@ body {
   font-family: 'Manga-style', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f0f0f0;
+  background-color: #1a1a1a;
+  color: #f0f0f0;
 }
 
 /* Header Styles */
@@ -27,18 +28,18 @@ main {
 }
 
 section {
-  background-color: #fff;
-  border: 2px solid #333;
+  background-color: #333;
+  border: 2px solid #f0f0f0;
   border-radius: 10px;
   padding: 20px;
   margin-bottom: 40px;
   width: 80%;
   max-width: 800px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
 
 h2 {
-  color: #333;
+  color: #f0f0f0;
   font-size: 2rem;
   margin-top: 0;
   text-align: center;
@@ -47,6 +48,15 @@ h2 {
 p {
   line-height: 1.6;
   font-size: 1.1rem;
+}
+
+a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #66BB6A;
 }
 
 /* Footer Styles */
