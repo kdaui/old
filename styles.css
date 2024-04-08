@@ -124,12 +124,3 @@ footer p {
 .dark-mode-toggle__input:checked + .dark-mode-toggle__label:before {
   transform: translateX(26px);
 }
-
-/* Manga-style Font */
-@font-face {
-  font-family: 'Manga-style';
-  src: url('manga-style.woff2') format('woff2'),
-       url('manga-style.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
