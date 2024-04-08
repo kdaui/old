@@ -1,3 +1,3 @@
-# About-Me
+# yo
 
 Website made for fun i guess.
