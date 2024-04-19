@@ -54,3 +54,11 @@ footer {
   margin-top: 50px;
   border-top: 2px solid #ffffff;
 }
+a {
+  color: #f00;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
