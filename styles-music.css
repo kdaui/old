@@ -1,12 +1,41 @@
 body {
-  background: linear-gradient(to right, #a2006d, #000);
+  background: #141414;
   color: #fff;
   font-family: 'Roboto', sans-serif;
+  animation: BackgroundGradient 5s ease infinite;
 }
+
 @keyframes BackgroundGradient {
-  0% {background-position: 0% 50%;}
-  50% {background-position: 100% 50%;}
-  100% {background-position: 0% 50%;}
+  0% {background-size: 200% 100%;}
+  50% {background-size: 0% 100%;}
+  100% {background-size: 200% 100%;}
+}
+
+body::before,
+body::after {
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+}
+
+body::before {
+  background-image: linear-gradient(to right, #a2006d, #000);
+  animation: BackgroundGradient 5s ease infinite;
+}
+
+body::after {
+  background-image: linear-gradient(to left, #a2006d, #000);
+  animation: BackgroundGradientReverse 5s ease infinite;
+}
+
+@keyframes BackgroundGradientReverse {
+  0% {background-size: 0% 100%;}
+  50% {background-size: 100% 100%;}
+  100% {background-size: 0% 100%;}
 }
 
 .container {
