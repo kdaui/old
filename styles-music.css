@@ -3,7 +3,7 @@ body {
   color: #fff;
   font-family: 'Roboto', sans-serif;
   animation: BackgroundGradient 5s ease infinite;
-  z-index: 1; /* Ensure the body itself is on top of the background */
+  margin: 0; /* Remove default body margin */
 }
 
 @keyframes BackgroundGradient {
@@ -25,9 +25,9 @@ body::after {
   position: fixed;
   top: 0;
   left: 0;
-  width: 50%;
-  height: 100%;
-  z-index: -1; /* Ensure background is behind the content */
+  width: 100%; /* Set the width to 100% for full coverage */
+  height: 100%; /* Set the height to 100% for full coverage */
+  z-index: -1; /* Ensure the background is behind the content */
 }
 
 body::before {
@@ -56,7 +56,7 @@ body::after {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  z-index: 1; /* Ensure content is on top of the background */
+  z-index: 1; /* Ensure the container is on top of the background */
 }
 
 .header {
