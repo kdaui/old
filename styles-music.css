@@ -6,9 +6,15 @@ body {
 }
 
 @keyframes BackgroundGradient {
-  0% {background-size: 200% 100%;}
-  50% {background-size: 0% 100%;}
-  100% {background-size: 200% 100%;}
+  0% {
+    background-size: 200% 100%;
+  }
+  50% {
+    background-size: 0% 100%;
+  }
+  100% {
+    background-size: 200% 100%;
+  }
 }
 
 body::before,
@@ -33,9 +39,15 @@ body::after {
 }
 
 @keyframes BackgroundGradientReverse {
-  0% {background-size: 0% 100%;}
-  50% {background-size: 100% 100%;}
-  100% {background-size: 0% 100%;}
+  0% {
+    background-size: 0% 100%;
+  }
+  50% {
+    background-size: 100% 100%;
+  }
+  100% {
+    background-size: 0% 100%;
+  }
 }
 
 .container {
@@ -61,43 +73,47 @@ body::after {
 }
 
 @media (max-width: 768px) {
-  .song, 
+  .song,
   .playlists {
     width: 100%;
   }
 }
 
-.song {
-  iframe {
-    border-radius: 12px;
-  }
+.song-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.song iframe {
+  border-radius: 12px;
 }
 
 .playlists {
   display: flex;
   flex-direction: column;
+}
 
-  h2 {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-    font-size: 1.6rem;
-  }
+.playlists h2 {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+}
 
-  .playlist {
-    margin-bottom: 20px;
+.playlists .playlist {
+  margin-bottom: 20px;
+}
 
-    h3 {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-      padding-bottom: 10px;
-      margin-bottom: 10px;
-      font-size: 1.4rem;
-    }
+.playlists .playlist h3 {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+}
 
-    iframe {
-      border-radius: 12px;
-    }
-  }
+.playlists .playlist iframe {
+  border-radius: 12px;
 }
 
 h1, h2, h3 {
@@ -134,12 +150,6 @@ footer {
   margin-bottom: 50px;
 }
 
-.home-button:hover {
-  background-color: #444;
-}
-.home-button:hover {
-  background-color: #444;
-}
 .home-button:hover {
   background-color: #444;
 }
