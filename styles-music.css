@@ -4,8 +4,8 @@ body {
   font-family: 'Roboto', sans-serif; /* Use the Roboto font */
   color: #fff; /* Set text color to white */
   
-  /* Dynamic gradient background animation */
-  background: linear-gradient(135deg, #ff006e, #000);
+  /* Dark pink to black gradient background with animation */
+  background: linear-gradient(135deg, #c71585, #000); /* Medium violet red to black */
   background-size: 400% 400%; /* Define the size of the gradient */
   animation: gradientAnimation 10s ease infinite; /* Animation with a 10-second loop */
 }
