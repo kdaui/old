@@ -5,16 +5,16 @@ body {
   color: #fff; /* Set text color to white */
   
   /* Dynamic gradient background animation */
-  background: linear-gradient(45deg, #ff006e, #000); /* Dark pink to black */
+  background: linear-gradient(135deg, #ff006e, #000);
   background-size: 400% 400%; /* Define the size of the gradient */
   animation: gradientAnimation 10s ease infinite; /* Animation with a 10-second loop */
 }
 
 /* Gradient animation keyframes */
 @keyframes gradientAnimation {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
 }
 
 /* Container styling */
