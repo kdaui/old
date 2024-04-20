@@ -5,7 +5,7 @@ body {
   color: #fff; /* Set text color to white */
   
   /* Dynamic gradient background animation */
-  background: linear-gradient(45deg, #1e3c72, #2a5298, #6f00ff);
+  background: linear-gradient(45deg, #ff006e, #000); /* Dark pink to black */
   background-size: 400% 400%; /* Define the size of the gradient */
   animation: gradientAnimation 10s ease infinite; /* Animation with a 10-second loop */
 }
@@ -22,6 +22,8 @@ body {
   max-width: 1200px;
   margin: 0 auto; /* Center the container */
   padding: 20px;
+  position: relative;
+  z-index: 1; /* Ensure the container is on top of the background */
 }
 
 /* Header styling */
