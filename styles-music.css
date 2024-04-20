@@ -1,7 +1,12 @@
 body {
-  background-color: #141414;
+  background: linear-gradient(to right, #a2006d, #000);
   color: #fff;
   font-family: 'Roboto', sans-serif;
+}
+@keyframes BackgroundGradient {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
 }
 
 .container {
@@ -17,14 +22,20 @@ body {
 
 .content {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  width: 100%;
 }
 
 .song,
 .playlists {
-  flex-basis: 49%;
+  width: calc(50% - 10px);
   margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .song, 
+  .playlists {
+    width: 100%;
+  }
 }
 
 .song {
@@ -94,6 +105,9 @@ footer {
   margin-bottom: 50px;
 }
 
+.home-button:hover {
+  background-color: #444;
+}
 .home-button:hover {
   background-color: #444;
 }
