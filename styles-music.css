@@ -1,29 +1,26 @@
-/* Body styling */
 body {
-  margin: 0; /* Remove default margin */
-  font-family: 'Roboto', sans-serif; /* Use the Roboto font */
-  color: #fff; /* Set text color to white */
-  
-  /* Dark pink to black gradient background with animation */
-  background: linear-gradient(135deg, #c71585, #000); /* Medium violet red to black */
-  background-size: 400% 400%; /* Define the size of the gradient */
-  animation: gradientAnimation 10s ease infinite; /* Animation with a 10-second loop */
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+
+  background: linear-gradient(135deg, #c71585, #000); 
+  background-size: 400% 400%; 
+  animation: gradientAnimation 10s ease infinite; 
 }
 
-/* Gradient animation keyframes */
 @keyframes gradientAnimation {
   0% { background-position: 0% 0%; }
   50% { background-position: 100% 100%; }
   100% { background-position: 0% 0%; }
 }
 
-/* Container styling */
+
 .container {
   max-width: 1200px;
-  margin: 0 auto; /* Center the container */
+  margin: 0 auto;
   padding: 20px;
   position: relative;
-  z-index: 1; /* Ensure the container is on top of the background */
+  z-index: 1;
 }
 
 /* Header styling */
@@ -34,42 +31,39 @@ body {
 
 /* Content styling */
 .content {
-  display: flex; /* Use flex layout for content */
+  display: flex;
   width: 100%;
 }
 
-/* Song and playlist sections styling */
+
 .song, .playlists {
   width: calc(50% - 10px);
   margin-bottom: 20px;
 }
 
-/* Responsive layout for smaller screens */
+
 @media (max-width: 768px) {
   .song, .playlists {
     width: 100%;
   }
 }
 
-/* Song container grid layout */
+
 .song-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 20px;
 }
 
-/* Song and playlist iframe styling */
 .song iframe, .playlists iframe {
   border-radius: 12px;
 }
 
-/* Playlist section styling */
 .playlists {
   display: flex;
   flex-direction: column;
 }
 
-/* Playlist header styling */
 .playlists h2 {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   padding-bottom: 10px;
@@ -77,12 +71,12 @@ body {
   font-size: 1.6rem;
 }
 
-/* Playlist item styling */
+
 .playlists .playlist {
   margin-bottom: 20px;
 }
 
-/* Playlist item header styling */
+
 .playlists .playlist h3 {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   padding-bottom: 10px;
@@ -90,7 +84,7 @@ body {
   font-size: 1.4rem;
 }
 
-/* Headings styling */
+
 h1, h2, h3 {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   padding-bottom: 10px;
@@ -98,14 +92,14 @@ h1, h2, h3 {
   font-weight: 500;
 }
 
-/* Anchor link styling */
+
 a {
-  color: #fff; /* White color for links */
-  text-decoration: none; /* Remove underline from links */
+  color: #fff; 
+  text-decoration: none; 
   margin-right: 20px;
 }
 
-/* Footer styling */
+
 footer {
   background-color: #141414;
   padding: 20px;
@@ -115,7 +109,7 @@ footer {
   margin-bottom: 50px;
 }
 
-/* Home button styling */
+
 .home-button {
   display: block;
   padding: 10px 20px;
@@ -128,7 +122,7 @@ footer {
   margin-bottom: 50px;
 }
 
-/* Home button hover effect */
+
 .home-button:hover {
   background-color: #444;
 }
