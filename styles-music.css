@@ -1,55 +1,9 @@
 body {
-  background: #141414;
+  /* Background gradient for a music-themed website */
+  background: linear-gradient(to right, #8e44ad, #3498db);
   color: #fff;
   font-family: 'Roboto', sans-serif;
-  animation: BackgroundGradient 5s ease infinite;
   margin: 0; /* Remove default body margin */
-}
-
-@keyframes BackgroundGradient {
-  0% {
-    background-size: 200% 100%;
-  }
-  50% {
-    background-size: 0% 100%;
-  }
-  100% {
-    background-size: 200% 100%;
-  }
-}
-
-body::before,
-body::after {
-  content: "";
-  display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%; /* Set the width to 100% for full coverage */
-  height: 100%; /* Set the height to 100% for full coverage */
-  z-index: -1; /* Ensure the background is behind the content */
-}
-
-body::before {
-  background-image: linear-gradient(to right, #a2006d, #000);
-  animation: BackgroundGradient 5s ease infinite;
-}
-
-body::after {
-  background-image: linear-gradient(to left, #a2006d, #000);
-  animation: BackgroundGradientReverse 5s ease infinite;
-}
-
-@keyframes BackgroundGradientReverse {
-  0% {
-    background-size: 0% 100%;
-  }
-  50% {
-    background-size: 100% 100%;
-  }
-  100% {
-    background-size: 0% 100%;
-  }
 }
 
 .container {
