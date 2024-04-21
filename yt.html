@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TBtube</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: white;
+        }
+
+        header, footer {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        header .logo {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        header .search-bar {
+            display: inline-block;
+        }
+
+        header .search-bar input {
+            padding: 5px;
+            margin-right: 5px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+
+        header .search-bar button {
+            padding: 5px 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        header .search-bar button:hover {
+            background-color: #444;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .video-card {
+            background-color: #1a1a1a;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .video-thumbnail {
+            width: 100%;
+            padding-bottom: 56.25%;
+            position: relative;
+        }
+
+        .video-thumbnail iframe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .video-info {
+            padding: 10px;
+        }
+
+        .video-info h3 {
+            margin: 0;
+            font-size: 16px;
+            color: #ccc;
+        }
+
+        .video-info p {
+            margin: 5px 0 0;
+            font-size: 14px;
+            color: #888;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>TBtube</h1>
+        </div>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search videos..." />
+            <button id="search-btn">Search</button>
+        </div>
+    </header>
+    <main>
+        <div class="video-grid">
+            <!-- Video 1 -->
+            <div class="video-card">
+                <div class="video-thumbnail">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/za49c6xxgr4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>WE STILL DON'T TRUST YOU by FUTURE & METRO BOOMIN│STUDIO REACTION</h3>
+                    <p>Metro and Pluto brought the HEAT once again. But this time...it's lookin' like war.</p>
+                </div>
+            </div>
+
+            <!-- Video 2 -->
+            <div class="video-card">
+                <div class="video-thumbnail">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Fn9jl1YHrHk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3> UTOPIA by TRAVIS SCOTT│STUDIO REACTION </h3>
+                    <p>The 5 year wait is finally over.</p>
+                </div>
+            </div>
+
+            <!-- Video 3 -->
+            <div class="video-card">
+                <div class="video-thumbnail">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/EWWBPvpZRbw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3> If I Laugh I Owe My Viewers Money ... </h3>
+                    <p>Back with another try not to laugh again and they just keep trying but idk man .. we'll see!</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 The Breather. All rights reserved.</p>
+    </footer>
+    <script>
+        document.getElementById("search-btn").addEventListener("click", function() {
+            const searchQuery = document.getElementById("search-input").value;
+            alert("Search feature is not implemented yet. You searched for: " + searchQuery);
+        });
+    </script>
+</body>
+
+</html>
