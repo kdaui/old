@@ -2,17 +2,11 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
-body {
-    background: linear-gradient(to bottom, 
-        #111111 0%,
-        #330033 20%,
-        #800020 40%,
-        #99002e 60%,
-        #800020 80%,
-        #3f0024 100%
-    );
+    background-image: url('images/gradient.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     color: #f1f1f1;
-}
 
 }
 
