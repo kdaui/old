@@ -61,7 +61,6 @@ a {
 .home-button, .play-button {
     background-color: transparent;
     color: white;
-    margin-left: 10px; /* Space between the buttons */
 }
 
 .home-button:hover, .play-button:hover {
