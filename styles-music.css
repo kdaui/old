@@ -32,113 +32,55 @@ body {
 }
 
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  position: relative;
-  z-index: 1;
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-/* Header styling */
 .header {
-  text-align: center;
-  margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
 }
 
-/* Content styling */
-.content {
-  display: flex;
-  width: 100%;
+h1 {
+    margin: 0;
+    color: #333;
 }
-
-
-.song, .playlists {
-  width: calc(50% - 10px);
-  margin-bottom: 20px;
-}
-
-
-@media (max-width: 768px) {
-  .song, .playlists {
-    width: 100%;
-  }
-}
-
-
-.song-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 20px;
-}
-
-.song iframe, .playlists iframe {
-  border-radius: 12px;
-}
-
-.playlists {
-  display: flex;
-  flex-direction: column;
-}
-
-.playlists h2 {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  padding-bottom: 10px;
-  margin-bottom: 20px;
-  font-size: 1.6rem;
-}
-
-
-.playlists .playlist {
-  margin-bottom: 20px;
-}
-
-
-.playlists .playlist h3 {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  padding-bottom: 10px;
-  margin-bottom: 10px;
-  font-size: 1.4rem;
-}
-
-
-h1, h2, h3 {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  padding-bottom: 10px;
-  margin-bottom: 20px;
-  font-weight: 500;
-}
-
 
 a {
-  color: #fff; 
-  text-decoration: none; 
-  margin-right: 20px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    border: 1px solid white;
+    margin-left: 10px;
+    cursor: pointer;
 }
 
-
-footer {
-  background-color: #141414;
-  padding: 20px;
-  text-align: center;
-  margin-top: 50px;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  margin-bottom: 50px;
+.home-button, .play-button {
+    background-color: transparent;
+    color: white;
 }
 
-
-.home-button {
-  display: block;
-  padding: 10px 20px;
-  background-color: #333;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 15px;
-  transition: background-color 0.3s ease;
-  margin-top: 20px;
-  margin-bottom: 50px;
+.home-button:hover, .play-button:hover {
+    color: #1DB954;
 }
 
+.content {
+    margin-top: 20px;
+}
 
-.home-button:hover {
-  background-color: #444;
+.song-container, .playlist-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+iframe {
+    border-radius: 12px;
+    width: 100%;
+    height: 352px;
+    border: none;
 }
