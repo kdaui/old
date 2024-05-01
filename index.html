@@ -1,43 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>I Breathe</title>
-  <link rel="stylesheet" href="manga-style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Breathe</title>
+    <link rel="stylesheet" href="manga-style.css">
 </head>
 <body>
-  <header>
-    <h1>I Breathe</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="manga.html">Manga</a></li>
-        <li><a href="music.html">Music</a></li>
-        <li><a href="tutorials.html">Tutorials</a></li>
-        <li><a href="yt.html">TBtube</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <section>
-      <h2>Who Is Breathing?</h2>
-      <p>Yo, I'm that @kdaui. guy. Big fan of <a href="https://anilist.co/manga/140475/Kaoru-Hana-wa-Rin-to-Saku/" target="_blank">The Fragrant Flower Blooms With Dignity</a> and <a href="https://anilist.co/manga/111233/Yofukashi-no-Uta/" target="_blank">Call Of The Night</a>.</p>
-      <p>| Formerly known as ASYLM on YT and NATSUSAWA on Discord |</p>
-      <p>Here's <a href="https://github.com/kdaui">my Github.</a></p>
-      <p>Here's <a href="https://www.youtube.com/@kdaui.">my Youtube.</a></p>
-      <p>And here's a <a href="https://www.youtube.com/watch?v=zETj2eNxTwE&list=PLyqQZ2_vs3rl_IISbnH6YakbZsgMA26z2&pp=gAQBiAQB">playlist</a> that i use to chill with.</p>
-    </section>
+    <header>
+        <h1>I Breathe</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="manga.html">Manga</a></li>
+                <li><a href="music.html">Music</a></li>
+                <li><a href="tutorials.html">Tutorials</a></li>
+                <li><a href="yt.html">TBtube</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Who Is Breathing?</h2>
+            <p>Yo, I'm that @kdaui. guy. Big fan of <a href="https://anilist.co/manga/140475/Kaoru-Hana-wa-Rin-to-Saku/"
+                    target="_blank">The Fragrant Flower Blooms With Dignity</a> and <a href="https://anilist.co/manga/111233/Yofukashi-no-Uta/"
+                    target="_blank">Call Of The Night</a>.</p>
+            <p>| Formerly known as ASYLM on YT and NATSUSAWA on Discord |</p>
+            <p>Here's <a href="https://github.com/kdaui">my Github.</a></p>
+            <p>Here's <a href="https://www.youtube.com/@kdaui.">my Youtube.</a></p>
+            <p>And here's a <a href="https://www.youtube.com/watch?v=zETj2eNxTwE&list=PLyqQZ2_vs3rl_IISbnH6YakbZsgMA26z2&pp=gAQBiAQB">playlist</a> that I use to chill with.</p>
+        </section>
 
-<section>
-  <h2>Where I Breathe</h2>
-  <p>I breathe in multiple places on this planet. You can find me in places I breathe in.</p>
-</section>
+        <section>
+            <h2>Where I Breathe</h2>
+            <p>I breathe in multiple places on this planet. You can find me in places I breathe in.</p>
+        </section>
+        <section>
+            <h2>Music Recommendation</h2>
+            <p id="music-recommendation">Loading...</p>
+        </section>
+    </main>
 
-  </main>
-  <footer>
-    <p>IS SUBSAKU CONFIRMED?!</p>
-    <p>© 2024 The Breather. All rights reserved.</p>
-  </footer>
+    <footer>
+        <p>IS SUBSAKU CONFIRMED?!</p>
+        <p>© 2024 The Breather. All rights reserved.</p>
+    </footer>
+    <script>
+        // Array of music recommendations
+        const musicRecommendations = [
+            "Song: 'WE STILL DONT TRUST YOU' by Metro Boomin and Future",
+            "Song: '酔いどれ知らず' by Kanaria",
+            "Song: 'Push Ups' by Drake",
+            "Song: 'Euphoria' by Kendrick Lamar",
+            "Song: 'all of me' by 21 Savage",
+            "Song: 'nhie' by 21 Savage and Doja Cat",
+            "Song: 'Onna Come Up' by Lil Eazzyy",
+            "Song: 'Falling' by Blacklite District",
+        ];
+        function displayRandomRecommendation() {
+            const recommendationElement = document.getElementById("music-recommendation");
+            const randomIndex = Math.floor(Math.random() * musicRecommendations.length);
+            recommendationElement.innerText = musicRecommendations[randomIndex];
+        }
+        function calculateTimeUntilNextMidnightUK() {
+            const now = new Date();
+            const ukTimeOffset = now.getTimezoneOffset() * -60 * 1000;
+            const ukTime = new Date(now.getTime() + ukTimeOffset);
+            const nextMidnight = new Date(ukTime);
+            nextMidnight.setHours(0, 0, 0, 0); // Set time to midnight
+            if (ukTime > nextMidnight) {
+                nextMidnight.setDate(nextMidnight.getDate() + 1);
+            }
+            const timeUntilNextMidnight = nextMidnight - ukTime;
+            
+            return timeUntilNextMidnight;
+        }
+        const timeUntilNextMidnight = calculateTimeUntilNextMidnightUK();
+        setTimeout(() => {
+            displayRandomRecommendation();
+            setInterval(displayRandomRecommendation, 86400000);
+        }, timeUntilNextMidnight);
+    </script>
 </body>
 </html>
