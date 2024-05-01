@@ -55,13 +55,13 @@ a {
     border-radius: 25px;
     text-decoration: none;
     border: 1px solid white;
-    margin-left: 10px;
     cursor: pointer;
 }
 
 .home-button, .play-button {
     background-color: transparent;
     color: white;
+    margin-left: 10px; /* Space between the buttons */
 }
 
 .home-button:hover, .play-button:hover {
