@@ -46,41 +46,5 @@
         <p>IS SUBSAKU CONFIRMED?!</p>
         <p>© 2024 The Breather. All rights reserved.</p>
     </footer>
-    <script>
-        // Array of music recommendations
-        const musicRecommendations = [
-            "Song: 'WE STILL DONT TRUST YOU' by Metro Boomin and Future",
-            "Song: '酔いどれ知らず' by Kanaria",
-            "Song: 'Push Ups' by Drake",
-            "Song: 'Euphoria' by Kendrick Lamar",
-            "Song: 'all of me' by 21 Savage",
-            "Song: 'nhie' by 21 Savage and Doja Cat",
-            "Song: 'Onna Come Up' by Lil Eazzyy",
-            "Song: 'Falling' by Blacklite District",
-        ];
-        function displayRandomRecommendation() {
-            const recommendationElement = document.getElementById("music-recommendation");
-            const randomIndex = Math.floor(Math.random() * musicRecommendations.length);
-            recommendationElement.innerText = musicRecommendations[randomIndex];
-        }
-        function calculateTimeUntilNextMidnightUK() {
-            const now = new Date();
-            const ukTimeOffset = now.getTimezoneOffset() * -60 * 1000;
-            const ukTime = new Date(now.getTime() + ukTimeOffset);
-            const nextMidnight = new Date(ukTime);
-            nextMidnight.setHours(0, 0, 0, 0); // Set time to midnight
-            if (ukTime > nextMidnight) {
-                nextMidnight.setDate(nextMidnight.getDate() + 1);
-            }
-            const timeUntilNextMidnight = nextMidnight - ukTime;
-            
-            return timeUntilNextMidnight;
-        }
-        const timeUntilNextMidnight = calculateTimeUntilNextMidnightUK();
-        setTimeout(() => {
-            displayRandomRecommendation();
-            setInterval(displayRandomRecommendation, 86400000);
-        }, timeUntilNextMidnight);
-    </script>
 </body>
 </html>
