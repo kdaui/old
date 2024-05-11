@@ -28,7 +28,7 @@ folder2.style.left = `${getRandomInt(0, 80)}vw`;
 folder2.style.top = `${getRandomInt(0, 80)}vh`;
 
 const folder1Link = document.createElement('a');
-folder1Link.setAttribute('href', 'https://kdaui.github.io/index.html');
+folder1Link.setAttribute('href', 'https://kdaui.github.io/home.html');
 folder1Link.appendChild(folder1);
 
 const folder2Link = document.createElement('a');
