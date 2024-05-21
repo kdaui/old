@@ -20,6 +20,20 @@ img {
     height: 400px;
 }
 
+.home-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #000;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.home-button:hover {
+    background-color: #000;
+}
+
 main {
     padding: 1rem;
 }
