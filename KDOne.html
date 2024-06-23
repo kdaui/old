@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KDOne</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #5D26C1, #A17FE0);
+            color: #ecf0f1;
+            font-family: 'Roboto', sans-serif;
+        }
+        .container {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+        .title {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .animation {
+            width: 100px;
+            height: 100px;
+            background: #8e44ad;
+            border-radius: 50%;
+            animation: pulse 1.5s infinite;
+            box-shadow: 0 0 15px rgba(142, 68, 173, 0.6);
+            margin: 0 auto 20px;
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        audio {
+            display: none; /* Hide the audio player */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">KDOne</div>
+        <div class="animation"></div>
+        <audio id="lofi-audio" autoplay loop>
+            <source src="https://live.hunter.fm/lofi_high" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    <script>
+        // Cookies
+        document.cookie = "username=@kdaui.; SameSite=Lax; Secure";
+        // Synchronize audio playback
+        const audio = document.getElementById('lofi-audio');
+        const serverTimeUrl = 'https://worldtimeapi.org/api/timezone/Etc/UTC'; // Example API to get server time
+
+        async function syncAudio() {
+            try {
+                const response = await fetch(serverTimeUrl);
+                const data = await response.json();
+                const serverTime = new Date(data.utc_datetime).getTime();
+                const localTime = new Date().getTime();
+                const timeDifference = serverTime - localTime;
+
+                // Assuming the stream starts at a specific server time
+                const streamStartTime = new Date('2024-06-23T00:00:00Z').getTime();
+                const currentStreamTime = (serverTime - streamStartTime) / 1000;
+
+                audio.currentTime = currentStreamTime;
+                audio.play();
+            } catch (error) {
+                console.error('Error syncing audio:', error);
+            }
+        }
+
+        syncAudio();
+    </script>
+</body>
+</html>
