@@ -5,48 +5,186 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>I Breathe</title>
-    <link rel="stylesheet" href="manga-style.css">
+    <style>
+        /* Loading Screen Styles */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+        }
+
+        #loading-text {
+            font-family: 'Courier New', Courier, monospace;
+            white-space: pre;
+            text-align: left;
+            overflow: hidden;
+        }
+
+        #content {
+            display: none;
+        }
+
+        /* Main Content Styles (from manga-style.css) */
+        body {
+            background-color: #141414;
+            color: #ffffff;
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #2d2d2d;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        main {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        main section {
+            width: 45%;
+            margin-right: 5%;
+            padding: 20px;
+            background-color: #3d3d3d;
+            border: 2px solid #ffffff;
+            border-radius: 10px;
+        }
+
+        h1, h2 {
+            border-bottom: 2px solid #ffffff;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        footer {
+            background-color: #2d2d2d;
+            padding: 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>I Breathe</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="manga.html">Manga</a></li>
-                <li><a href="music.html">Music</a></li>
-                <li><a href="https://kdaui.boards.net/">Forums</a></li>
-                <li><a href="tutorials.html">Tutorials</a></li>
-                <li><a href="yt.html">TBtube</a></li>
-                <li><a href="KDOne.html">KDOne</a></li>
-                <li><a href="/posts">Terminal</a></li>
-                <li><a href="my_homies.html">My Homies</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h2>Who Is Breathing?</h2>
-            <p>Yo, I'm that @kdaui. guy. Big fan of <a href="https://anilist.co/manga/140475/Kaoru-Hana-wa-Rin-to-Saku/"
-                    target="_blank">The Fragrant Flower Blooms With Dignity</a> and <a href="https://anilist.co/manga/111233/Yofukashi-no-Uta/"
-                    target="_blank">Call Of The Night</a>.</p>
-            <p>| Formerly known as ASYLM on YT and NATSUSAWA on Discord |</p>
-            <p>Here's <a href="https://github.com/kdaui">my Github.</a></p>
-            <p>Here's <a href="https://www.youtube.com/@kdaui.">my Youtube.</a></p>
-            <p>And here's a <a href="https://www.youtube.com/watch?v=zETj2eNxTwE&list=PLyqQZ2_vs3rl_IISbnH6YakbZsgMA26z2&pp=gAQBiAQB">playlist</a> that I use to chill with.</p>
-        </section>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <pre id="loading-text"></pre>
+    </div>
 
-        <section>
-            <h2>Where I Breathe</h2>
-            <p>I breathe in multiple places on this planet. You can find me in places I breathe in.</p>
-        </section>
-    </main>
+    <!-- Main Content -->
+    <div id="content">
+        <header>
+            <h1>I Breathe</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="manga.html">Manga</a></li>
+                    <li><a href="music.html">Music</a></li>
+                    <li><a href="https://kdaui.boards.net/">Forums</a></li>
+                    <li><a href="tutorials.html">Tutorials</a></li>
+                    <li><a href="yt.html">TBtube</a></li>
+                    <li><a href="KDOne.html">KDOne</a></li>
+                    <li><a href="/posts">Terminal</a></li>
+                    <li><a href="my_homies.html">My Homies</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <h2>Who Is Breathing?</h2>
+                <p>Yo, I'm that @kdaui. guy. Big fan of <a href="https://anilist.co/manga/140475/Kaoru-Hana-wa-Rin-to-Saku/"
+                        target="_blank">The Fragrant Flower Blooms With Dignity</a> and <a href="https://anilist.co/manga/111233/Yofukashi-no-Uta/"
+                        target="_blank">Call Of The Night</a>.</p>
+                <p>| Formerly known as ASYLM on YT and NATSUSAWA on Discord |</p>
+                <p>Here's <a href="https://github.com/kdaui">my Github.</a></p>
+                <p>Here's <a href="https://www.youtube.com/@kdaui.">my Youtube.</a></p>
+                <p>And here's a <a href="https://www.youtube.com/watch?v=zETj2eNxTwE&list=PLyqQZ2_vs3rl_IISbnH6YakbZsgMA26z2&pp=gAQBiAQB">playlist</a> that I use to chill with.</p>
+            </section>
 
-    <footer>
-        <p id="kanye-quote"></p>
-        <p>© 2024 The Breather. All rights reserved.</p>
-    </footer>
+            <section>
+                <h2>Where I Breathe</h2>
+                <p>I breathe in multiple places on this planet. You can find me in places I breathe in.</p>
+            </section>
+        </main>
 
+        <footer>
+            <p id="kanye-quote"></p>
+            <p>© 2024 The Breather. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const loadingText = `
+Loading I Breathe...
+Initializing...
+Loading Manga section...
+Loading Music section...
+Connecting to Forums...
+Loading Tutorials...
+Loading TBtube...
+Loading KDOne...
+Loading Terminal...
+Loading My Homies...
+Ready to Breathe...
+`;
+
+            const loadingScreen = document.getElementById('loading-screen');
+            const loadingTextElement = document.getElementById('loading-text');
+            const content = document.getElementById('content');
+            
+            let currentLine = 0;
+            const lines = loadingText.trim().split('\n');
+
+            // Function to display the next line
+            function showNextLine() {
+                if (currentLine < lines.length) {
+                    loadingTextElement.innerText += lines[currentLine] + '\n';
+                    currentLine++;
+                    setTimeout(showNextLine, 500); // Adjust delay as needed
+                } else {
+                    // After loading all lines, fade out loading screen and show content
+                    loadingScreen.style.transition = 'opacity 1s';
+                    loadingScreen.style.opacity = 0;
+                    setTimeout(() => {
+                        loadingScreen.style.display = 'none';
+                        content.style.display = 'block';
+                    }, 1000);
+                }
+            }
+
+            // Start showing lines
+            showNextLine();
+        });
+    </script>
     <script>
         document.addEventListener('DOMContentLoaded', async function () {
             // Function to fetch a quote from the Kanye Rest API
