@@ -143,7 +143,6 @@
                     <li><a href="yt.html">TBtube</a></li>
                     <li><a href="KDOne.html">KDOne</a></li>
                     <li><a href="/posts">Terminal</a></li>
-                    <li><a href="my_homies.html">My Homies</a></li>
                 </ul>
             </nav>
         </header>
@@ -167,24 +166,44 @@
 
         <footer>
             <p id="kanye-quote"></p>
-            <p>© 2024 The Breather. All rights reserved.</p>
+            <p>© The Breather. 2024. All rights reserved. Made with love by Me (@kdaui.) and <a href="https://kdaui.github.io/my_homies.html">My Homies</a></p>
         </footer>
     </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const loadingText = `
-Loading I Breathe...
-Initializing...
-Loading Manga section...
-Loading Music section...
-Connecting to Forums...
-Loading Tutorials...
-Loading TBtube...
-Loading KDOne...
-Loading Terminal...
-Loading My Homies...
-Ready to Breathe...
+
+
+ ██████╗ ██╗  ██╗██████╗  █████╗ ██╗   ██╗██╗              
+██╔═══██╗██║ ██╔╝██╔══██╗██╔══██╗██║   ██║██║              
+██║██╗██║█████╔╝ ██║  ██║███████║██║   ██║██║              
+██║██║██║██╔═██╗ ██║  ██║██╔══██║██║   ██║██║              
+╚█║████╔╝██║  ██╗██████╔╝██║  ██║╚██████╔╝██║██╗           
+ ╚╝╚═══╝ ╚═╝  ╚═╝╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ╚═╝╚═╝           
+                                                           
+ █████╗ ███╗   ██╗██████╗                                  
+██╔══██╗████╗  ██║██╔══██╗                                 
+███████║██╔██╗ ██║██║  ██║                                 
+██╔══██║██║╚██╗██║██║  ██║                                 
+██║  ██║██║ ╚████║██████╔╝                                 
+╚═╝  ╚═╝╚═╝  ╚═══╝╚═════╝                                  
+                                                           
+███████╗██████╗ ██╗███████╗███╗   ██╗██████╗ ███████╗      
+██╔════╝██╔══██╗██║██╔════╝████╗  ██║██╔══██╗██╔════╝      
+█████╗  ██████╔╝██║█████╗  ██╔██╗ ██║██║  ██║███████╗      
+██╔══╝  ██╔══██╗██║██╔══╝  ██║╚██╗██║██║  ██║╚════██║      
+██║     ██║  ██║██║███████╗██║ ╚████║██████╔╝███████║      
+╚═╝     ╚═╝  ╚═╝╚═╝╚══════╝╚═╝  ╚═══╝╚═════╝ ╚══════╝      
+                                                           
+██████╗ ██████╗ ███████╗███████╗███████╗███╗   ██╗████████╗
+██╔══██╗██╔══██╗██╔════╝██╔════╝██╔════╝████╗  ██║╚══██╔══╝
+██████╔╝██████╔╝█████╗  ███████╗█████╗  ██╔██╗ ██║   ██║   
+██╔═══╝ ██╔══██╗██╔══╝  ╚════██║██╔══╝  ██║╚██╗██║   ██║   
+██║     ██║  ██║███████╗███████║███████╗██║ ╚████║   ██║   
+╚═╝     ╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝╚═╝  ╚═══╝   ╚═╝   
+
+
 `;
 
             const loadingScreen = document.getElementById('loading-screen');
@@ -198,7 +217,7 @@ Ready to Breathe...
                 if (currentLine < lines.length) {
                     loadingTextElement.innerText += lines[currentLine] + '\n';
                     currentLine++;
-                    setTimeout(showNextLine, 500); // Adjust delay as needed
+                    setTimeout(showNextLine, 300); // Adjust delay as needed
                 } else {
                     loadingScreen.style.opacity = 0;
                     setTimeout(() => {
